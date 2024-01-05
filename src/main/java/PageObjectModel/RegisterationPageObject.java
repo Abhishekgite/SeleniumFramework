@@ -15,12 +15,12 @@ public class RegisterationPageObject {
 	private By email = By.xpath("//input[@name='email']");
 
 	// driver 2 took the scope of driver from register test cases class
-	
+
 	public RegisterationPageObject(WebDriver driver2) {
-		
+
 		// TODO Auto-generated constructor stub
-		
-		this.driver=driver2;
+
+		this.driver = driver2;
 	}
 
 	public WebElement enterFirstname() {

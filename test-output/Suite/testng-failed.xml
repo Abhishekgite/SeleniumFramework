@@ -5,9 +5,16 @@
     <classes>
       <class name="testcases.RegisterTestCases">
         <methods>
-          <include name="verifyRegisterationWithInValidData"/>
+          <include name="launchBroswer"/>
+          <include name="verifyRegisterationWithValidData"/>
         </methods>
       </class> <!-- testcases.RegisterTestCases -->
+      <class name="testcases.LoginTestCases">
+        <methods>
+          <include name="invalidLoginTest"/>
+          <include name="launchBroswer"/>
+        </methods>
+      </class> <!-- testcases.LoginTestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

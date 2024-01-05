@@ -4,33 +4,33 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPageObject {
+public class HomePageObject {
 
 	public WebDriver driver; // WebDriver is declared globally and it is declared as null
 
-	private By email = By.xpath("//input[@name='email']");
+	private By myAccount = By.xpath("//i[@class='fa fa-user']");
 
-	private By password = By.xpath("//input[@name='password']");
+	private By register = By.xpath("//a[contains(text(),'Register')]");
 
-	private By Login = By.xpath("//input[@value='Login']");
+	private By Login = By.xpath("//a[contains(text(),'Login')]");
 
 	// driver 2 took the scope of driver from register test cases class
 
-	public LoginPageObject(WebDriver driver2) {
+	public HomePageObject(WebDriver driver2) {
 
 		// TODO Auto-generated constructor stub
 
 		this.driver = driver2;
 	}
 
-	public WebElement enteremail() {
+	public WebElement clickonMyAccount() {
 
-		return driver.findElement(email);
+		return driver.findElement(myAccount);
 	}
 
-	public WebElement enterpassword() {
+	public WebElement clickonregister() {
 
-		return driver.findElement(password);
+		return driver.findElement(register);
 	}
 
 	public WebElement clickonLogin() {
