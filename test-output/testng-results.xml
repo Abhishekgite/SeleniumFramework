@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-05T01:26:36 IST" name="Suite" finished-at="2024-01-05T01:26:59 IST" duration-ms="23562">
+    <groups>
+    </groups>
+    <test started-at="2024-01-05T01:26:36 IST" name="Test" finished-at="2024-01-05T01:26:59 IST" duration-ms="23562">
+      <class name="testcases.RegisterTestCases">
+        <test-method signature="verifyRegisterationWithInValidData()[pri:0, instance:testcases.RegisterTestCases@12aba8be]" started-at="2024-01-05T01:26:44 IST" name="verifyRegisterationWithInValidData" finished-at="2024-01-05T01:26:52 IST" duration-ms="7779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterationWithInValidData -->
+        <test-method signature="verifyRegisterationWithValidData()[pri:0, instance:testcases.RegisterTestCases@12aba8be]" started-at="2024-01-05T01:26:52 IST" name="verifyRegisterationWithValidData" finished-at="2024-01-05T01:26:59 IST" duration-ms="7335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterationWithValidData -->
+      </class> <!-- testcases.RegisterTestCases -->
+      <class name="testcases.LoginTestCases">
+        <test-method signature="invalidLoginTest()[pri:0, instance:testcases.LoginTestCases@17497425]" started-at="2024-01-05T01:26:36 IST" name="invalidLoginTest" finished-at="2024-01-05T01:26:44 IST" duration-ms="8342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+      </class> <!-- testcases.LoginTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
