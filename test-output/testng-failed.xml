@@ -5,8 +5,8 @@
     <classes>
       <class name="testcases.RegisterTestCases">
         <methods>
-          <include name="verifyRegisterationWithBlankData"/>
           <include name="launchBroswer"/>
+          <include name="verifyRegisterationWithInValidData"/>
         </methods>
       </class> <!-- testcases.RegisterTestCases -->
     </classes>

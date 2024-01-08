@@ -33,7 +33,7 @@ public class RegisterTestCases extends baseClass2 {
 
 		rop.EnterEmail().clear();
 		rop.EnterEmail().sendKeys("");
-		
+
 		rop.EnterTelephone().sendKeys("");
 		rop.EnterPassword().sendKeys("");
 		rop.EnterPasswordConfirm().sendKeys("");
@@ -41,21 +41,25 @@ public class RegisterTestCases extends baseClass2 {
 		rop.AcceptPrivacyPolicy().click();
 		rop.ClickOnContinueButton().click();
 
-		
 		SoftAssert sa = new SoftAssert();
-		
+
 		String firstNameErrorMsg = "First Name must be between 1 and 32 characters!";
-		
+
 		String lastNameErrorMsg = "Last Name must be between 1 and 32 characters!";
-		
+
 		sa.assertEquals(rop.CaptureFirstNameErrorMsg().getText(), firstNameErrorMsg);
-		
+
 		sa.assertEquals(rop.CaptureLastNameErrorMsg().getText(), lastNameErrorMsg);
-	
+
 		sa.assertAll();
 	}
 
-	@Test 
+	public String generateRandomEmail() {
+
+		return System.currentTimeMillis() + "@gmail.com";
+	}
+
+	@Test
 	public void verifyRegisterationWithInValidData() throws IOException, InterruptedException {
 
 		Thread.sleep(3000);
@@ -64,15 +68,21 @@ public class RegisterTestCases extends baseClass2 {
 		rop.EnterFirstname().sendKeys("test");
 		rop.EnterLastname().sendKeys("test");
 
-		rop.EnterEmail().sendKeys("te123@gmail.com");
-		
-		
+		rop.EnterEmail().sendKeys(generateRandomEmail());
+
 		rop.EnterTelephone().sendKeys("12345678");
 		rop.EnterPassword().sendKeys("test123");
 		rop.EnterPasswordConfirm().sendKeys("test123");
 		rop.ClickOnSubscribe().click();
 		rop.ClickOnContinueButton().click();
 
+		SoftAssert sa = new SoftAssert();
+
+		String successURL = "https://naveenautomationlabs.com/opencart/index.php?route=account/success";
+
+		sa.assertEquals(driver.getCurrentUrl(), successURL);
+
+		sa.assertAll();
 	}
 
 }

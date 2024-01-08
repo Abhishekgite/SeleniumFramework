@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T00:13:47 IST" name="Default suite" finished-at="2024-01-08T00:14:00 IST" duration-ms="13433">
+  <suite started-at="2024-01-08T23:07:45 IST" name="Default suite" finished-at="2024-01-08T23:08:00 IST" duration-ms="14904">
     <groups>
     </groups>
-    <test started-at="2024-01-08T00:13:47 IST" name="Default test" finished-at="2024-01-08T00:14:00 IST" duration-ms="13433">
+    <test started-at="2024-01-08T23:07:45 IST" name="Default test" finished-at="2024-01-08T23:08:00 IST" duration-ms="14904">
       <class name="testcases.RegisterTestCases">
-        <test-method is-config="true" signature="launchBroswer()[pri:0, instance:testcases.RegisterTestCases@18d87d80]" started-at="2024-01-08T00:13:47 IST" name="launchBroswer" finished-at="2024-01-08T00:13:51 IST" duration-ms="4325" status="PASS">
+        <test-method is-config="true" signature="launchBroswer()[pri:0, instance:testcases.RegisterTestCases@618425b5]" started-at="2024-01-08T23:07:45 IST" name="launchBroswer" finished-at="2024-01-08T23:07:50 IST" duration-ms="5616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBroswer -->
-        <test-method signature="verifyRegisterationWithBlankData()[pri:0, instance:testcases.RegisterTestCases@18d87d80]" started-at="2024-01-08T00:13:51 IST" name="verifyRegisterationWithBlankData" finished-at="2024-01-08T00:13:56 IST" duration-ms="4594" status="PASS">
+        <test-method signature="verifyRegisterationWithBlankData()[pri:0, instance:testcases.RegisterTestCases@618425b5]" started-at="2024-01-08T23:07:50 IST" name="verifyRegisterationWithBlankData" finished-at="2024-01-08T23:07:55 IST" duration-ms="4664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegisterationWithBlankData -->
-        <test-method signature="verifyRegisterationWithInValidData()[pri:0, instance:testcases.RegisterTestCases@18d87d80]" started-at="2024-01-08T00:13:56 IST" name="verifyRegisterationWithInValidData" finished-at="2024-01-08T00:14:00 IST" duration-ms="4464" status="PASS">
+        <test-method signature="verifyRegisterationWithInValidData()[pri:0, instance:testcases.RegisterTestCases@618425b5]" started-at="2024-01-08T23:07:55 IST" name="verifyRegisterationWithInValidData" finished-at="2024-01-08T23:08:00 IST" duration-ms="4468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegisterationWithInValidData -->
