@@ -12,7 +12,7 @@ import PageObjectModel.RegisterationPageObject;
 public class LoginTestCases extends baseClass2 {
 
 	@Test
-	public void invalidLoginTest() throws IOException, InterruptedException {
+	public void ValidLoginTest() throws IOException, InterruptedException {
 
 		Thread.sleep(3000);
 
@@ -21,11 +21,11 @@ public class LoginTestCases extends baseClass2 {
 		hpo.clickonLogin().click();
 
 		LoginPageObject lop = new LoginPageObject(driver);
-		lop.enteremail().sendKeys("test@gmail.com");
+		lop.enteremail().sendKeys(RegisterTestCases.randomEmail);
 		lop.enterpassword().sendKeys("test@123");
 		lop.clickonLogin().click();
 
-		// driver.findElement(By.xpath("")).sendKeys(null);
+		
 	}
 
 }

@@ -9,12 +9,14 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.Resources.baseClass2;
+import com.Resources.constants;
 
 import PageObjectModel.HomePageObject;
 import PageObjectModel.RegisterationPageObject;
 
 public class RegisterTestCases extends baseClass2 {
 
+	public static String randomEmail="";
 	@Test
 	public void verifyRegisterationWithBlankData() throws IOException, InterruptedException {
 
@@ -43,9 +45,9 @@ public class RegisterTestCases extends baseClass2 {
 
 		SoftAssert sa = new SoftAssert();
 
-		String firstNameErrorMsg = "First Name must be between 1 and 32 characters!";
+		String firstNameErrorMsg = constants.firstNameErrorMsg;
 
-		String lastNameErrorMsg = "Last Name must be between 1 and 32 characters!";
+		String lastNameErrorMsg = constants.lastNameErrorMsg;
 
 		sa.assertEquals(rop.CaptureFirstNameErrorMsg().getText(), firstNameErrorMsg);
 
@@ -59,27 +61,31 @@ public class RegisterTestCases extends baseClass2 {
 		return System.currentTimeMillis() + "@gmail.com";
 	}
 
-	@Test
+	
+	@Test(dependsOnMethods ="verifyRegisterationWithBlankData")
 	public void verifyRegisterationWithInValidData() throws IOException, InterruptedException {
 
 		Thread.sleep(3000);
-
+		
+		
+		randomEmail = generateRandomEmail();
 		RegisterationPageObject rop = new RegisterationPageObject(driver);
-		rop.EnterFirstname().sendKeys("test");
-		rop.EnterLastname().sendKeys("test");
+		
+		rop.EnterFirstname().clear();
+		rop.EnterFirstname().sendKeys(constants.firstname);
+		rop.EnterLastname().sendKeys(constants.lastname);
 
-		rop.EnterEmail().sendKeys(generateRandomEmail());
+		rop.EnterEmail().sendKeys(randomEmail);
 
-		rop.EnterTelephone().sendKeys("12345678");
-		rop.EnterPassword().sendKeys("test123");
-		rop.EnterPasswordConfirm().sendKeys("test123");
+		rop.EnterTelephone().sendKeys(constants.telephone);
+		rop.EnterPassword().sendKeys(constants.password);
+		rop.EnterPasswordConfirm().sendKeys(constants.confirmpassword);
 		rop.ClickOnSubscribe().click();
 		rop.ClickOnContinueButton().click();
 
 		SoftAssert sa = new SoftAssert();
 
-		String successURL = "https://naveenautomationlabs.com/opencart/index.php?route=account/success";
-
+		String successURL = constants.successURL;
 		sa.assertEquals(driver.getCurrentUrl(), successURL);
 
 		sa.assertAll();

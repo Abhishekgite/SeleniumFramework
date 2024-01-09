@@ -18,7 +18,7 @@ public class baseClass2 {
 
 		// To read the data from properties file
 		FileInputStream fis = new FileInputStream(
-				"C:\\Eclipse Project\\14-Sept2023-Selenium-Project-testng-Framework-Prac\\src\\main\\java\\com\\Resources\\data.properties");
+				System.getProperty("user.dir")+"\\src\\main\\java\\com\\Resources\\data.properties");
 
 		// To access the properties file
 		Properties prop = new Properties();
