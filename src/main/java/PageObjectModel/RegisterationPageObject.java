@@ -25,17 +25,14 @@ public class RegisterationPageObject {
 	private By privacyPolicy = By.xpath("//input[@name='agree']");
 
 	private By continueButton = By.xpath("//input[@value='Continue']");
-	
-	private By firstNameErrorMsg = By.xpath("(//div[@class='text-danger'])[1]");
-	
-	private By lastNameErrorMsg = By.xpath("(//div[@class='text-danger'])[2]");
-	
 
+	private By firstNameErrorMsg = By.xpath("(//div[@class='text-danger'])[1]");
+
+	private By lastNameErrorMsg = By.xpath("(//div[@class='text-danger'])[2]");
 
 	// driver 2 took the scope of driver from register test cases class
 
 	public RegisterationPageObject(WebDriver driver2) {
-
 
 		this.driver = driver2;
 	}
@@ -84,15 +81,14 @@ public class RegisterationPageObject {
 
 		return driver.findElement(continueButton);
 	}
-	
+
 	public WebElement CaptureFirstNameErrorMsg() {
 
 		return driver.findElement(firstNameErrorMsg);
 	}
-	
+
 	public WebElement CaptureLastNameErrorMsg() {
 
 		return driver.findElement(lastNameErrorMsg);
 	}
 }
-

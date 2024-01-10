@@ -14,14 +14,16 @@ public class baseClass2 {
 
 	public WebDriver driver;
 
+	public Properties prop;
+
 	public void intializeDriver() throws IOException, InterruptedException {
 
 		// To read the data from properties file
 		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir")+"\\src\\main\\java\\com\\Resources\\data.properties");
+				System.getProperty("user.dir") + "\\src\\main\\java\\com\\Resources\\data.properties");
 
 		// To access the properties file
-		Properties prop = new Properties();
+		prop = new Properties();
 		prop.load(fis);
 
 		String broswerName = prop.getProperty("broswer");
@@ -48,7 +50,12 @@ public class baseClass2 {
 
 		intializeDriver();
 
-		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
+		driver.get(prop.getProperty("url"));
 
+	}
+
+	public String generateRandomEmail() {
+
+		return System.currentTimeMillis() + "@gmail.com";
 	}
 }
